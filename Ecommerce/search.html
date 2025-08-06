@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Search Results</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- ==============search section starts here============== -->
+<section class="search_section py-5 my-5" id="search_section">
+  <div class="container">
+    <div class="title text-center mb-5">
+      <h2><i class="far fa-file mr-2"></i>Search</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-10 mx-auto">
+        <!-- Search Input -->
+        <div class="input-group">
+          <input type="text" class="form-control" value="xyz">
+          <span class="input-group-btn">
+            <button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
+          </span>
+        </div>
+        <small>Showing all results matching "xyz"</small>
+
+        <!-- Search Results Table -->
+        <div class="table-responsive mt-3">
+          <table class="table table-hover">
+            <tbody class="border-bottom">
+              <!-- Product 1 -->
+              <tr>
+                <td class="number text-center">1</td>
+                <td class="image">
+                  <img src="assets/images/product1.png" width="100px" class="img img-fluid" alt="">
+                </td>
+                <td class="product">
+                  <strong>Green Sweatshirt</strong><br>This hoodie is soft, stylish, and best for winter comfort.
+                </td>
+                <td class="rate text-right">
+                  <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></span>
+                </td>
+                <td class="price text-right">₹700</td>
+              </tr>
+
+              <!-- Product 2 -->
+              <tr>
+                <td class="number text-center">2</td>
+                <td class="image">
+                  <img src="assets/images/product2.png" width="100px" class="img img-fluid" alt="">
+                </td>
+                <td class="product">
+                  <strong>Floral Dress</strong><br>Elegant and perfect for parties, this floral dress is a must-have.
+                </td>
+                <td class="rate text-right">
+                  <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></span>
+                </td>
+                <td class="price text-right">₹1000</td>
+              </tr>
+
+              <!-- Product 3 -->
+              <tr>
+                <td class="number text-center">3</td>
+                <td class="image">
+                  <img src="assets/images/product3.png" width="100px" class="img img-fluid" alt="">
+                </td>
+                <td class="product">
+                  <strong>Winter Jacket</strong><br>Stay warm in style with this insulated winter jacket.
+                </td>
+                <td class="rate text-right">
+                  <span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></span>
+                </td>
+                <td class="price text-right">₹1200</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- End Table -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ==============search section ends here============== -->
+
+</body>
+</html>

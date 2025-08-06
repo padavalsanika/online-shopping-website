@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order Confirmation</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
+  <style>
+    body {
+      background: #f6f9fc;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .order_confirmation h1 {
+      font-weight: bold;
+      border-bottom: 2px solid #007bff;
+      display: inline-block;
+      padding-bottom: 8px;
+    }
+    .order_confirmation img {
+      max-width: 200px;
+      margin-bottom: 20px;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      border: none;
+    }
+    .btn-primary:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ==============order_confirmation starts here============== -->
+<section class="order_confirmation py-5 my-5" id="order_confirmation">
+  <div class="container">
+    <div class="section_title text-center mb-5">
+      <h1 class="text-capitalize">Order Confirmation</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mx-auto text-center">
+        <div>
+          <img src="assets/images/success_tick.png" class="img img-fluid" alt="Order Success">
+        </div>
+        <div>
+          <h2>Thank you for your purchase!</h2>
+          <h6>A confirmation email has been sent to <b>xyz@gmail.com</b></h6>
+          <h6><span class="mr-2">Order No:</span><b>123123123123</b></h6>
+          <h6>
+            <span class="mr-2">Order Status:</span>
+            <b><span class="badge badge-danger">Pending</span></b>
+          </h6>
+          <a href="index.html" class="btn btn-primary btn-lg mt-5">Return to Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ==============order_confirmation ends here============== -->
+
+</body>
+</html>

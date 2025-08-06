@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product View Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"/>
+  <link rel="stylesheet" href="assets/css/style.css">
+ <style>
+    body {
+      background: linear-gradient(120deg, #f6f9fc, #e9f3f8);
+      min-height: 100vh;
+      padding-top: 40px;
+    }
+    .product-view {
+      background: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .carousel-inner img {
+      height: 400px;
+      object-fit: contain;
+    }
+    .product-title {
+      font-size: 26px;
+      font-weight: bold;
+    }
+    .product-category {
+      font-size: 14px;
+      color: #fff;
+      background-color: #007bff;
+      padding: 4px 12px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+    .product-price {
+      font-size: 24px;
+      font-weight: bold;
+      color: #222;
+    }
+    .product-ratting i {
+      color: #f4c150;
+    }
+    .related-product img {
+      height: 200px;
+      object-fit: cover;
+    }
+    .btn-buy {
+      background-color: #007bff;
+      color: #fff;
+      border-radius: 6px;
+      padding: 10px 24px;
+      border: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 6px rgba(0, 123, 255, 0.5);
+    }
+    .btn-buy:hover {
+      background-color: #0056b3;
+      transform: scale(1.02);
+    }
+    .quantity-label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 500;
+    }
+    .section_title h3 {
+      font-weight: 600;
+    }
+  </style>
+
+<script>
+  const productData = [
+    {
+      title: "T-shirt",
+      category: "Dress",
+      price: "400",
+      description: "T-shirt for modern fashion.",
+      rating: 3
+    },
+    {
+      title: "Partywear",
+      category: "Dress",
+      price: "1200",
+      description: "Short v nake partywaer dress.",
+      rating: 4
+    },
+    {
+      title: "Classic Blazer",
+      category: "Blazer",
+      price: "5999",
+      description: "Stylish blazer perfect for formal occasions.",
+      rating: 5
+    }
+  ];
+
+  document.addEventListener("DOMContentLoaded", function () {
+    $('#productCarousel').on('slid.bs.carousel', function (e) {
+      const index = $(e.relatedTarget).index();
+      const product = productData[index];
+      document.querySelector(".product-title").textContent = product.title;
+      document.querySelector(".product-category").textContent = product.category;
+      document.querySelector(".product-price").textContent = `₹${product.price}`;
+      document.querySelector(".product-description").textContent = product.description;
+
+      const ratingContainer = document.querySelector(".product-ratting");
+      ratingContainer.innerHTML = "";
+      for (let i = 0; i < 5; i++) {
+        const star = document.createElement("i");
+        star.className = i < product.rating ? "fas fa-star" : "far fa-star";
+        ratingContainer.appendChild(star);
+      }
+    });
+  });
+</script>
+
+
+</head>
+<body>
+<div class="container">
+  <div class="row product-view mb-5">
+    <div class="col-md-6">
+      <div id="productCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/images/product7.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/product8.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/product9.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#productCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#productCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h2 class="product-title">All Products</h2>
+      <div class="product-category mb-2">Category: Dress</div>
+      <div class="product-ratting mb-2">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i>
+      </div>
+      <div class="product-price mb-3">₹400</div>
+      <p>Revamp your closet with a touch of elegance.</p>
+      <div class="d-flex align-items-center mb-3">
+        <label class="mr-2">Qty:</label>
+        <input type="number" class="form-control w-25" value="1" min="1">
+      </div>
+      <button class="btn btn-buy">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Related Products -->
+  <div class="section_title text-center mb-4">
+    <h3 class="text-capitalize">Related Products</h3>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card related-product">
+        <img src="assets/images/product4.png" class="card-img-top" alt="...">
+        <div class="card-body text-center">
+          <h5 class="card-title">T-shirt</h5>
+          <p class="card-text">₹399</p>
+          <a href="product_detail4.html" class="btn btn-sm btn-outline-primary">View</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card related-product">
+        <img src="assets/images/product5.png" class="card-img-top" alt="...">
+        <div class="card-body text-center">
+          <h5 class="card-title">Long Floral Dress</h5>
+          <p class="card-text">₹1000</p>
+          <a href="product_detail2.html" class="btn btn-sm btn-outline-primary">View</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card related-product">
+        <img src="assets/images/product6.png" class="card-img-top" alt="...">
+        <div class="card-body text-center">
+          <h5 class="card-title">Winter Jacket</h5>
+          <p class="card-text">₹1200</p>
+          <a href="product_detail3.html" class="btn btn-sm btn-outline-primary">View</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

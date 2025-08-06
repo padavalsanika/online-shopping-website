@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Category Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"/>
+  <style>
+    body {
+      background: linear-gradient(120deg, #f6f9fc, #e9f3f8);
+      padding: 50px 0;
+    }
+    .category-card {
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .category-card:hover {
+      transform: translateY(-5px);
+    }
+    .category-img {
+      height: 220px;
+      object-fit: cover;
+      width: 100%;
+    }
+    .badge-new {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #dc3545;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+    }
+    .card-body {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card-body h5 {
+      font-weight: 600;
+    }
+    .product-rating {
+      color: #f4c150;
+      margin-bottom: 8px;
+    }
+    .section_title {
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="section_title text-center">
+    <h2 class="text-capitalize">Shop by Category</h2>
+  </div>
+  <div class="row">
+    <!-- Category 1 -->
+    <div class="col-md-4 mb-4 d-flex">
+      <div class="card category-card position-relative w-100">
+        <img src="assets/images/product8.png" class="category-img" alt="Dresses">
+        <span class="badge-new">New</span>
+        <div class="card-body text-center">
+          <h5>Dresses</h5>
+          <div class="product-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <p>Stylish and elegant dresses for every occasion.</p>
+          <a href="product.html" class="btn btn-sm btn-primary">Shop Now</a>
+        </div>
+      </div>
+    </div>
+    <!-- Category 2 -->
+    <div class="col-md-4 mb-4 d-flex">
+      <div class="card category-card w-100">
+        <img src="assets/images/product7.png" class="category-img" alt="T-Shirts">
+        <div class="card-body text-center">
+          <h5>T-Shirts</h5>
+          <div class="product-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <p>Comfortable cotton T-shirts in multiple colors.</p>
+          <a href="product.html" class="btn btn-sm btn-primary">Shop Now</a>
+        </div>
+      </div>
+    </div>
+    <!-- Category 3 -->
+    <div class="col-md-4 mb-4 d-flex">
+      <div class="card category-card w-100">
+        <img src="assets/images/category2.png" class="category-img" alt="Winter Jackets">
+        <div class="card-body text-center">
+          <h5>Winter Jackets</h5>
+          <div class="product-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <p>Warm and trendy jackets to beat the cold.</p>
+          <a href="product.html" class="btn btn-sm btn-primary">Shop Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

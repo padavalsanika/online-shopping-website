@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stylish Cart Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #e0f7ff, #e2d9f3);
+      font-family: 'Segoe UI', sans-serif;
+      padding: 40px 0;
+    }
+    .cart-container {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      padding: 30px;
+    }
+    .product-img {
+      width: 90px;
+      height: auto;
+      border-radius: 8px;
+    }
+    .product-details small {
+      display: block;
+      color: #777;
+    }
+    .quantity-box {
+      display: flex;
+      align-items: center;
+    }
+    .quantity-box button {
+      width: 30px;
+      height: 30px;
+      border: none;
+      background-color: #007bff;
+      color: #fff;
+      border-radius: 5px;
+    }
+    .quantity-box input {
+      width: 50px;
+      text-align: center;
+      margin: 0 5px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .remove-item {
+      color: #007bff;
+      font-size: 0.9rem;
+    }
+    .summary {
+      background: linear-gradient(to bottom left, #c1d8ff, #e4ccff);
+      border-radius: 60px;
+      padding: 70px;
+      color: #333;
+    }
+    .summary h5 {
+      font-weight: 600;
+      margin-bottom: 60px;
+      text-align: center;
+    }
+    .summary p {
+      margin-bottom: 15px;
+    }
+    .btn-checkout {
+      background-color: #007bff;
+      color: white;
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+    }
+    .cart-title {
+      
+      padding: 10px;
+      border-radius: 5px;
+      display: inline-block;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="row cart-container">
+    <div class="col-md-8">
+      <h4 class="cart-title">Shopping Cart (2 items)</h4>
+      <!-- Product 1 -->
+      <div class="d-flex align-items-center py-3 border-bottom">
+        <img src="assets/images/product4.png" alt="Blue denim shirt" class="product-img mr-3">
+        <div class="product-details flex-grow-1">
+          <h6>Blue denim shirt</h6>
+          <small>SHIRT - BLUE</small>
+          <small>COLOR: BLUE</small>
+          <small>SIZE: M</small>
+          <a href="#" class="remove-item mt-2 d-block"><i class="fas fa-trash"></i> REMOVE ITEM</a>
+        </div>
+        <div class="text-center">
+          <div class="quantity-box mb-1">
+            <button>-</button>
+            <input type="text" value="1" readonly>
+            <button>+</button>
+          </div>
+          <strong>₹700</strong>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="d-flex align-items-center py-3">
+        <img src="assets/images/product5.png" alt="Red hoodie" class="product-img mr-3">
+        <div class="product-details flex-grow-1">
+          <h6>Red hoodie</h6>
+          <small>HOODIE - RED</small>
+          <small>COLOR: RED</small>
+          <small>SIZE: M</small>
+          <a href="#" class="remove-item mt-2 d-block"><i class="fas fa-trash"></i> REMOVE ITEM</a>
+        </div>
+        <div class="text-center">
+          <div class="quantity-box mb-1">
+            <button>-</button>
+            <input type="text" value="1" readonly>
+            <button>+</button>
+          </div>
+          <strong>₹1000</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="summary">
+        <h5>Order summary</h5>
+        <p>Blue denim shirt <span class="float-right">₹700</span></p>
+        <p>Red hoodie <span class="float-right">₹1000</span></p>
+        <hr>
+        <p><strong>Total amount</strong> <span class="float-right">₹1700</span></p>
+        <a href="checkout.html" class="btn-checkout mt-3">Go to Checkout</a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
